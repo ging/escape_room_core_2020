@@ -1,0 +1,238 @@
+/* --------- COLORS ---------*/
+/* --------- TYPOGRAPHY ---------*/
+* {
+  box-sizing: border-box; }
+
+html {
+  min-height: 100vh; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #292F33;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+  cursor: wait; }
+  body form a {
+    text-decoration: none; }
+  body .container {
+    height: 100%;
+    padding: 0px;
+    margin: 0px; }
+    body .container nav {
+      position: fixed;
+      top: 0px;
+      padding: 10px 30px;
+      width: 100%;
+      box-shadow: 0px 0px 10px #eee;
+      background-color: white; }
+      body .container nav #username {
+        float: right;
+        vertical-align: middle;
+        height: 35px;
+        line-height: 30px;
+        color: #777;
+        padding-right: 10px; }
+      body .container nav #logo {
+        width: 100px; }
+      body .container nav .navIcon {
+        float: right;
+        font-size: 22px;
+        vertical-align: middle;
+        line-height: 30px;
+        color: #B31829;
+        padding-right: 10px; }
+    body .container section {
+      flex: 1;
+      padding: 20px;
+      width: 100%;
+      height: 100vh;
+      padding-top: 60px;
+      padding-bottom: 75px; }
+      body .container section.mollecule {
+        background-image: url("/images/molecules.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      body .container section .full {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        align-items: center; }
+        body .container section .full .centered {
+          background-color: white;
+          box-shadow: 0px 0px 10px #eee;
+          padding: 45px; }
+          body .container section .full .centered #username-input {
+            padding: 10px; }
+          body .container section .full .centered #password-input {
+            padding: 10px; }
+          body .container section .full .centered #submit-input {
+            padding: 10px;
+            text-align: center; }
+          body .container section .full .centered #loginImage {
+            width: 300px;
+            margin-bottom: 10px; }
+          body .container section .full .centered label {
+            margin-bottom: 5px;
+            padding-left: 10px; }
+          body .container section .full .centered input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            outline: none; }
+      body .container section .containerDashboard {
+        display: flex;
+        justify-content: center;
+        padding: 30px; }
+      body .container section .virusDetail {
+        display: flex;
+        height: 100%; }
+        body .container section .virusDetail .left {
+          flex: 1;
+          padding: 20px;
+          border-right: 1px solid #ddd;
+          text-align: center; }
+          body .container section .virusDetail .left #top {
+            text-align: left; }
+          body .container section .virusDetail .left #placeholder {
+            text-align: center;
+            display: inline-block;
+            width: auto; }
+            body .container section .virusDetail .left #placeholder img {
+              width: 100px; }
+            body .container section .virusDetail .left #placeholder input {
+              width: 100%; }
+          body .container section .virusDetail .left #thumbnail {
+            width: 100px;
+            border: 1px solid #ddd; }
+          body .container section .virusDetail .left table {
+            border-collapse: collapse;
+            border-spacing: 0px; }
+            body .container section .virusDetail .left table tr {
+              border-bottom: 1px solid #ddd; }
+              body .container section .virusDetail .left table tr td {
+                padding: 5px; }
+        body .container section .virusDetail .right {
+          padding: 20px;
+          padding-top: 30px;
+          flex: 1; }
+          body .container section .virusDetail .right #observations-title {
+            color: #B31829;
+            font-size: 16px;
+            margin-top: 10px; }
+          body .container section .virusDetail .right #observations {
+            min-height: 300px;
+            padding: 10px;
+            border: 1px solid #B31829; }
+      body .container section .trials {
+        padding: 20px; }
+        body .container section .trials #successOnly {
+          color: #B31829;
+          margin: 10px 5px;
+          display: inline-block; }
+        body .container section .trials #trialTable {
+          width: auto; }
+      body .container section .trialDetail {
+        padding: 20px; }
+    body .container footer {
+      text-align: center;
+      width: 100%; }
+      body .container footer a {
+        color: #ddd;
+        font-size: 10px; }
+    body .container .button1 {
+      background: #B31829;
+      border: 2px solid transparent;
+      color: white;
+      box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      text-align: center;
+      padding: .5rem 1.2rem .5rem 1.2rem;
+      font-size: .8rem;
+      cursor: pointer;
+      outline: none !important; }
+      body .container .button1:disabled {
+        cursor: not-allowed; }
+    body .container .button2 {
+      background: white;
+      border: 2px solid #B31829;
+      color: #B31829;
+      box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      text-align: center;
+      padding: .5rem 1.2rem .5rem 1.2rem;
+      font-size: .8rem;
+      cursor: pointer;
+      outline: none !important; }
+      body .container .button2:disabled {
+        cursor: not-allowed; }
+    body .container .table {
+      background-color: white;
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0px; }
+      body .container .table tr:first-child {
+        border-bottom: 2px solid #B31829; }
+      body .container .table tr th {
+        color: #B31829; }
+      body .container .table tr td, body .container .table tr th {
+        text-align: left;
+        padding: 5px;
+        border: none; }
+        body .container .table tr td:last-child, body .container .table tr th:last-child {
+          text-align: center; }
+      body .container .table tr:nth-child(even) {
+        background-color: #fafafa; }
+    body .container h1#virusName {
+      color: #B31829;
+      text-transform: uppercase; }
+    body .container ul.breadcrumb {
+      padding: 10px 16px;
+      margin: 10px 20px;
+      list-style: none;
+      background-color: #fafafa; }
+      body .container ul.breadcrumb li {
+        display: inline; }
+        body .container ul.breadcrumb li a {
+          color: #B31829;
+          text-decoration: none; }
+          body .container ul.breadcrumb li a:hover {
+            color: #95D9C3;
+            text-decoration: underline; }
+      body .container ul.breadcrumb li + li:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0"; }
+
+.todo {
+  padding: 10px 16px;
+  margin: 10px 20px; }
+
+#flashmessages {
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  background-color: #eee;
+  margin: 10px; }
+  #flashmessages #close {
+    cursor: pointer;
+    float: right; }
+
+@media screen and (max-width: 700px) {
+  .virusDetail {
+    display: block !important; }
+    .virusDetail .left {
+      border-right: none !important; }
+  #virusTable {
+    max-width: 100%; }
+    #virusTable tr td:nth-child(1), #virusTable tr td:nth-child(3), #virusTable tr td:nth-child(5), #virusTable tr th:nth-child(1), #virusTable tr th:nth-child(3), #virusTable tr th:nth-child(5) {
+      display: none; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/escapp.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.8.7/polyfill.min.js"></script>
+    <script src="/javascripts/escapp.js"></script>
+    <script src="/javascripts/jquery-4.5.6.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img id="logo" src="/images/csic.png" alt="">
+            <% if (session.user){ %>
+            <a href="/?_method=DELETE"><i class="fas fa-sign-out-alt navIcon"></i></a>
+            <a target="_blank" href="/email/index.html" id="email-link"><i class="fas fa-envelope navIcon"></i></a>
+            <a href="/dashboard"><i class="fas fa-home navIcon"></i></a>
+            <span id="username"><b><%=session.user.username%></b></span>
+            <% } %>
+        </nav>
+        
+            <%- body %>
+            <% include ./_flash_errors.ejs%>
+    </div>
+</body>
+</html>

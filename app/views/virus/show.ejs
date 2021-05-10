@@ -1,0 +1,62 @@
+<section>
+    <ul class="breadcrumb">
+      <li><a href="/dashboard">Virus Dashboard</a></li>
+      <li><%=virus.abbreviation%></li>
+    </ul>
+    <div class="virusDetail">
+        <div class="left">
+            <div id="top">
+                <h1 id="virusName"><%=virus.name%></h1>
+                <img id="thumbnail" src="/images/virus/<%=(virus.id % 10)%>.png">
+                <table>
+                    <tr>
+                        <td>
+                            <b>Género:</b>
+                        </td>
+                        <td>
+                            <%=virus.genus%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Especie:</b>
+                        </td>
+                        <td>
+                            <%=virus.species%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Abreviatura:</b>
+                        </td>
+                        <td>
+                            <%=virus.abbreviation%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Designación:</b>
+                        </td>
+                        <td>
+                            <%=virus.designation%>
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+            </div>
+            <div id="placeholder">
+
+            </div>
+            <a href="/dashboard" id="back"><button class="button2">Volver</button></a>
+        </div>
+        <div class="right">
+            <div>
+                <p id="observations-title"><b>Observaciones</b></p>
+                <div id="observations">
+                   <p style="text-align:center;"><img src="/images/spinner.gif"/></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer><a href="https://www.freepik.es/fotos-vectores-gratis/fondo">brgfx - www.freepik.es</a></footer>
+</section>

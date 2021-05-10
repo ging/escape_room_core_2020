@@ -1,0 +1,33 @@
+<section>
+	<ul class="breadcrumb">
+	  <li><a href="/dashboard">Virus Dashboard</a></li>
+	  <li><a href="/virus/<%=trials[0].Virus.id%>"><%=trials[0].Virus.abbreviation%></a></li>
+	  <li>Ensayos</li>
+	</ul>
+	<div class="trials">
+		<h1 id="virusName"><%=trials[0].Virus.name%></h1>
+		<h2><%=title%></h2>
+		<% if (msg === ""){ %>
+			<a id="successOnly" href="./successfulTrials?code=<%=code%>">Ver sólo los ensayos con éxito</a>
+		<% } else { %>
+			<pre><%=msg%></pre>
+			<a id="successOnly" href="./trials?code=<%=code%>">Ver todos los ensayos </a>
+		<% } %>
+		<table id="trialTable" class="table">
+			<tr>
+				<th>Nombre</th>
+				<th></th>
+			</tr>
+			<% for (var t in trials){ %>
+			<tr>
+				<td><%=trials[t].name%></td>
+				<td>
+					<a href="/trials/<%=trials[t].id%>?code=<%=code%>">
+						<button class="button1">Ver</button>
+					</a>
+				</td>
+			</tr>
+			<% } %>
+		</table> 
+	</div>
+</section>

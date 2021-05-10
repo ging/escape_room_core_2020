@@ -1,0 +1,25 @@
+<section>
+	<ul class="breadcrumb">
+		<li><a href="/dashboard">Virus Dashboard</a></li>
+		<li><a href="/virus/<%=trial.Virus.id%>"><%=trial.Virus.abbreviation%></a></li>
+		<li><a id="subst" href="/virus/<%=trial.Virus.id%>/trials%>?code=<%=locals.code%>">Ensayos</a></li>
+		<li><%=trial.name%></li>
+	</ul>
+	<div class="trialDetail">
+		<h1 id="virusName"><%=trial.Virus.name%></h1>
+		<h2><%=trial.name%></h2>
+		<p><%=trial.status === "SUCCESS" ? "Este ensayo ha sido exitoso" : "Este ensayo no ha tenido éxito"%></p>
+        <% if (trial.status === "SUCCESS") { %>
+        	<h3>Recursos disponibles</h3>
+        	<pre><%=msg%></pre>
+        	<form method="post" action="/trials/<%=trial.id%>/download" id="virus-form">
+        		 <label><input type="radio"  value="geneticCode" required />Código genético de la vacuna</label>
+        		<br/><br/>
+				<a href="javascript:history.back()">
+					<button type="button" class="button2">Volver</button>
+				</a>
+				<input type="submit" id="download" data-id="<%=trial.id%>" class="button1" value="Descargar"/>
+			</form>
+		<% }%>
+	</div>
+</section>

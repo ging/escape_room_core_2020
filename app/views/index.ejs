@@ -1,0 +1,22 @@
+<section class="mollecule">
+    <div class="full">
+
+    <div class="centered">
+        <img id="loginImage" src="/images/csic_completo.png" alt="">
+        <form action="/" method="POST" id="login-form">
+        <input type="hidden" name="redir" value="<%= redir %>">
+        <div id="username-input">
+            <label for="login">Username</label><br/>
+            <input type="text" name="login" value="g.rivas"/>
+        </div>
+        <div id="password-input">
+            <label for="password">Password</label><br/>
+            <input type="password" name="password" autocomplete="off" onkeyup="this.value=this.value.toLowerCase();"/>
+        </div>
+        <div id="submit-input">
+            <button type="submit" class="button1" id="login-btn">Acceder</button>
+        </div>
+        </form>
+    </div>
+</div>
+</section>
